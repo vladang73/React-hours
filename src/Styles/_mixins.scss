@@ -1,0 +1,33 @@
+@mixin font-size($font-size, $font-weight, $line-height: normal, $letter-spacing: normal) {
+  /* ===== Usage =====
+  p {
+    @include font-size(12, 700, 18, 12);
+    // returns
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.5; // 18 / 12
+    letter-spacing: 12px;
+  }
+*/
+  font-size: $font-size * 1px;
+  font-weight: $font-weight;
+
+  @if $line-height==normal {
+    line-height: normal;
+  } @else {
+    line-height: $line-height + px;
+  }
+
+  @if $letter-spacing==normal {
+    letter-spacing: normal;
+  } @else {
+    letter-spacing: $letter-spacing + px;
+  }
+}
+
+@mixin reset-button {
+  outline: none;
+  border: none;
+  background: none;
+  padding: 0;
+}

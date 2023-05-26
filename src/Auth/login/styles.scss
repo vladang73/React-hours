@@ -1,0 +1,49 @@
+@import '../../Styles/vars';
+@import '../../Styles/mixins';
+
+.login {
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-image: url('../../Images/img_admin.png');
+  &_main {
+    @media (max-width: 772px) {
+      width: 100%;
+    }
+  }
+  &_side {
+    height: 450px;
+    background-color: #2dafe5;
+
+    &_img {
+      margin-top: 320px;
+    }
+  }
+  &_logo {
+    padding: 45px 0px;
+    img {
+      width: 300px;
+    }
+  }
+
+  &_label {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: #b9c0ce;
+    top: -0.5rem;
+    left: 0.8rem;
+  }
+
+  button {
+    background-color: #4697d1;
+    border-color: #4697d1;
+    &:hover {
+      background-color: #2671a7;
+      border-color: #2671a7;
+    }
+  }
+
+  &_forgot {
+    color: #585858;
+  }
+}
